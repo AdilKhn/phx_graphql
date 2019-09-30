@@ -5,7 +5,12 @@ defmodule PhxGraphqlWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", PhxGraphqlWeb do
+  scope "/" do
     pipe_through :api
+
+    forward "/graphiql", Absinthe.Plug.GraphiQL,
+      schema: PhxGraphqlWeb.Schema,
+      interface: :simple,
+      context: %{pubsub: PhxGraphqlWeb.Endpoint}
   end
 end
