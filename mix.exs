@@ -41,12 +41,9 @@ defmodule PhxGraphql.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-#      {:absinthe_ecto, "~> 0.1.0"},
-#      {:absinthe_plug, "~> 1.4"},
       {:absinthe, "~> 1.4.0"},
-      {:absinthe_phoenix, "~> 1.4.0"},
-      {:poison, "~> 2.1.0"},
-      {:absinthe, "~> 1.4"}
+      {:absinthe_plug, "~> 1.4"},
+      {:poison, "~> 2.1.0"}
     ]
   end
 
